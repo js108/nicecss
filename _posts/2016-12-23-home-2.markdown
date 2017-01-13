@@ -1,0 +1,15 @@
+---
+title:  "How To Be A Nice CSS Boy"
+categories: home-2
+---
+
+##This Site
+I built this site using ITCSS, OOCSS, and BEM, whic is insanely huge overkill. But I figured why not practice what I preach. For the backend I used the static site builder Jekyll which I like because it spits out a fast secure site that you can host for free on GitHub. It's also has a nice simple dev envitonment with its own server and preprocessor listener. I wrote this text in Markdown. Here is the repoLINK. 
+
+##ME
+My name is Joe. I design all sorts of things both physical and virtual and I build websites. If you'd like me to do some work for you or you just enjoy telling people about their typos feel free to email jschoech at gmail. I like basketball and reading. Here's something I wrote about how I hate ESPN's website https://medium.com/@on3ness/the-nightmare-online-espn-go-com-475d1d31b391#.hkc3tkagp.
+
+
+SEMANTICS
+AUTHORS NAMES
+SPELL CHECK

@@ -1,0 +1,35 @@
+---
+title:  "How To Be A Nice CSS Boy"
+categories: defunct
+---
+Why should one write nice CSS? Because it's nice. It's considerate to those who will work on a website after you, including your future self. In this way there is no need to differntiate between yourself and others, you can simply be nice.
+
+N.I.C.E.C.S.S. in this case isn't an acronym or a methodology it's just being nice. It's also maybe like "wow nice css!". There are of course methodologies to help you write NICE CSS, which I will be talking about shortly, as I recount my journey from writing not-so-nice CSS to learning to write it nicely. And folks it's a barn burner. Strap in. Spoiler this page represents the entirerty of my attempts to write nice CSS.
+
+To be clear I'll be focusing on writing CSS so it's easily maitianable, resuable, and readable. And focusing not as much on the aspects of load time, file size, time to first meaningful paint and so forth. We could call all that other stuff good CSS. Good CSS is super important but is outside of the scope of this article. It's also, it should be noted, occsionally in conflict with nice CSS{LINKINLINE STYLES} . I'm not even gonna minify my code, wow. BTW if you're interested in Good front end development in general I just read this extremely impressive somewhat unhinged article on the topic https://hackernoon.com/10-things-i-learned-making-the-fastest-site-in-the-world-18a0e1cdf4a7#.us7gkl3vz . The guy even seems like he talks fast. Also the website he built seems useful. I'm going to learn every thing on there. Swear. I'm nice now.
+
+Like everything many of the considerations that go into writing nice CSS are contextural. My lord I'm already starting to annoy myself with this niceness. I'm not actually a super nice person I might have to switch up the terminology. I already used up good CSS. I'm gonna call it NCSS from now on just like that show about analyzing blood splatters.
+
+Anyway back to conext a lot of the things that matter in NCSS have to do with complexity and working in teams. But in this case I'm going to apply them to this webpage which is simple and is being worked on by only me. I'm just going to use the concepts of NCSS anyway because it seems like a fine way to learn.
+
+I feel like I'm just writing lots of words to avoid having to explain the actual technical realities of what I'm talking about. I haven't even written the CSS to display code blocks yet. As I'm typing this I've written four rules, one mixin, and have declared a couple variables. I'm writing in markdown and I don't even know how to make a code block in it. Also there's a chuck of Ipsum sitting directly below this paragraph. Did you know you're traveling this journey to niceness with me. Now you do. Hah wild.
+
+OK I know how to do a c0de block in markup now you just indent, which is nice. What's not nice is that it assigns a class of `highlight` which is inside a `highlighter-rouge` class. Ideally it would be a `body-text__code-block` class. Maybe I will try and figure out how to make that happen.
+
+Desciding how to write things is actually really hard. First I was gonna go super minimal with Handlebars. But Handlebars doesn't like line breaks so you'd end up with these huge unreadble blocks of text with `p` tags in them. Obviously you dont want to put your content inside your markup cause it's just be a huge mess. I'm sure there are a million better ideas about how to do it or whatever. 
+
+I built this site in Jekyll which is nice cause it generates a fast static site that you can host on github for free. It also has build in preprocessor listening which is handy. But now I have to deal with markdown putting rouge classes in my markup. I guess I could just use html instead of markdown, but then you have to put all this html in there instead of just pleasant line returns and whatnot. I might just write some html in the markdown where it's needed to be nice. But that's kind of mess and offends my sense of stylistics. 
+
+In conclusion I switched to redcarpet markdown from the default kramdown and it only wraps code blocks in the `highlight` class while abandoning `highlight-rouge`. Redcarpet does offer ways to customize this rendering https://github.com/vmg/redcarpet but it seems a little complicated and I'm not sure I'm ready to go down that rabbithole. Maybe later. Anyway highlight does seem like the standard way to do things and maybe it's its own *block* when you think about it.
+
+The methods for organizing and writing css nicely are named oocss, smacss, itcss, bem, atomic css, and prob other various acronyms. They are all trying to make css simplier, comprehendable, resuable, dry, pretend-ecasulated, and so forth. Of course they go about it in sometimes complimentary sometimes conflicting ways. That way people can argue about it. To those who say css isn't real code notice that people are agruing about what the best way to write it. The fact that I don't super care which of these is best prob makes me not a real coder.
+
+```
+c0de block
+code
+```
+
+Oocss is 
+
+
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+	<meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+	<link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+	<link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+	<link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
+
+	<link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+	
+</head>
+
+<body>
+	<div class="wrap-center">
+		<header class="title-head title-head__padding title-head__font-size">
+			<h1>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</h1>
+		</header>
+	</div>
+
+	<div class="section-border"></div>
+
+	<div class="wrap-center">
+		<div class="body-text body-text__padding">
+
+			{% for post in site.categories.home-1 %}
+			    {{ post.content  }}
+			{% endfor %}
+
+		</div>
+	</div>
+
+	<div class="section-border"></div>
+
+	<div class="wrap-center">
+		<div class="body-text body-text__padding">
+
+			{% for post in site.categories.home-2 %}
+			    {{ post.content  }}
+			{% endfor %}
+
+		</div>
+	</div>
+</body>

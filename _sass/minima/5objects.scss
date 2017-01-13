@@ -1,0 +1,33 @@
+.wrap-center {
+	max-width: 840px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.title-head {
+	font-size: 150%;
+}
+
+.title-head__padding {
+	padding: $section-padding;
+}
+
+.section-border {
+	border-bottom: 10px dashed $tertiary-color;
+}
+
+.body-text {
+	color: #fff;
+	font-size: 125%;
+} 
+
+.body-text__padding {
+	padding: $section-padding;
+}
+
+.highlight {
+	padding: 2em;
+	margin: 2em;
+	background-color: $tertiary-color;
+}
+
