@@ -5,7 +5,8 @@
 }
 
 .title-head {
-	font-size: 150%;
+	font-size: 250%;
+	font-size: 3.5vw;
 }
 
 .title-head__padding {
@@ -18,7 +19,7 @@
 
 .body-text {
 	color: #fff;
-	font-size: 125%;
+	font-size: 150%;
 } 
 
 .body-text__padding {
@@ -27,7 +28,6 @@
 
 .highlight {
 	padding: 2em;
-	margin: 2em;
 	background-color: $tertiary-color;
 }
 
