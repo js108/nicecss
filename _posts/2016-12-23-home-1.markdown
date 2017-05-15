@@ -17,6 +17,7 @@ In attempting to write NICE CSS I looked at the methodologies: ITCSS, OOCSS, SMA
 You'll notice that these systems challenge the once sacred, specification endowed wisdoms of *semanticness* and other *best practices*. Here's [an article about that](https://tympanus.net/codrops/2013/01/22/defending-presentational-class-names) and [another one](http://www.stubbornella.org/content/2011/04/28/our-best-practices-are-killing-us).
 
 ##ITCSS
+
 ITCSS is a system of organizing your CSS so you'll always know where to put and find things rather than just adding new selectors to the end of a file. This, amongst other benefits, keeps you from getting stuck in weird specificity potholes and avoids source order conflicts because you've arranged the source in a meaningful order. It's specifically intended to help large teams stay on the same page. It was developed by [Harry Roberts](http://csswizardry.com), who anyone who has ever tried to google away their CSS problems will know as CSS Wizardry. 
 
 ![itcss](/assets/itcss.svg)
