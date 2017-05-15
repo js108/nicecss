@@ -34,7 +34,7 @@ Objects refers to the first O in OOCSS, which is the system we'll talk about nex
 
 In Components we put our more visually designy things like buttons and dotted lines and so forth. 
 
-Finally there's Trumps. The term will be familiar to players of card games in the bridge family. This where we put selectors that we absolutely want to override everything else. Let's say you had some Arabic text that needed to read right to left and you wanted to be absolutely sure that nothing would ever tell it to read right to left, you could put it in here. All these systems hate id selectors due to their tendency to nuke your specificity graph. But Harry says it's ok to put some in trumps.
+Finally there's Trumps. The term will be familiar to players of card games in the bridge family. This where we put selectors that we absolutely want to override everything else. Let's say you had some Arabic text that needed to read right to left and you wanted to be absolutely sure that nothing would ever tell it to read left to right, you could put it in here. All these systems hate id selectors due to their tendency to nuke your specificity graph. But Harry says it's ok to put some in trumps.
 
 It's fine to add and subtract new triangle levels to suit your needs. In my travels I came across a concept that works well here. It's called Shames. This is where you put code that doesn't adhere to the principals of nice css. Things you need to refactor. At least they'll be all in one place where it's harder to ignore them. If you're using a version tracker it's easy for everyone on the team to shame each other too. I put it at the bottom of the triangle though I'm not sure that's the best place for it.
 
