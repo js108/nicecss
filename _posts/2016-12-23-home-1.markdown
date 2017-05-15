@@ -34,7 +34,7 @@ Objects refers to the first O in OOCSS, which is the system we'll talk about nex
 
 In Components we put our more visually designy things like buttons and dotted lines and so forth. 
 
-Finally there's Trumps. The term will be familiar to players of card games in the bridge family. This where we put selectors that we absolutely want to override everything else. Let's say you had some Arabic text that needed to read right to left and you wanted to be absolutely sure that nothing would ever tell it to read left to right, you could put it in here. All these systems hate id selectors due to their tendency to nuke your specificity graph. But Harry says it's ok to put some in trumps.
+Finally there's Trumps. The term will be familiar to players of card games in the bridge family and other things. This where we put selectors that we absolutely want to override everything else. Let's say you had some Arabic text that needed to read right to left and you wanted to be absolutely sure that nothing would ever tell it to read left to right, you could put it in here. All these systems hate id selectors due to their tendency to nuke your specificity graph. But Harry says it's ok to put some in trumps.
 
 It's fine to add and subtract new triangle levels to suit your needs. In my travels I came across a concept that works well here. It's called Shames. This is where you put code that doesn't adhere to the principals of nice css. Things you need to refactor. At least they'll be all in one place where it's harder to ignore them. If you're using a version tracker it's easy for everyone on the team to shame each other too. I put it at the bottom of the triangle though I'm not sure that's the best place for it.
 
@@ -71,12 +71,12 @@ The two main principles of OOCSS are *separate structure from skin* and *separat
 
 In practice when writing OOCSS you'll notice that you tend to write rule sets that have one or two declarations rather than three, four, or more. If you find yourself writing novel length works you're probably not thinking in OOCSS.
 
-There's a lot out there about [how spcifically OOCSS should be writen](https://ianstormtaylor.com/oocss-plus-sass-is-the-best-way-to-css), which is often compelling and worth looking into, but IMO OOCSS really has the most value when appreciated as a principle rather than a collection of rules. Which is also true of a lot of other things. And as you'll see the methodologies to come are increasingly prescriptive and generally work well with OOCSS principles.
+There's a lot out there about [how spcifically OOCSS should be writen](https://ianstormtaylor.com/oocss-plus-sass-is-the-best-way-to-css), which is often compelling and worth looking into, but IMO OOCSS really has the most value when appreciated as a principle rather than a collection of rules. Which is also true of a lot of other things. And as you'll see the methodologies to come are increasingly prescriptive and generally work well with OOCSS concepts.
 
 If you want to learn more about OOCSS here's [an intro article](https://www.smashingmagazine.com/2011/12/an-introduction-to-object-oriented-css-oocss) and [the official github](https://github.com/stubbornella/oocss/wiki).
 
 ## SMACSS
-SMA stand for Scalable and Modular Architecture and is a lot like a combination of ITCSS and OOCSS. There are some particular differences like SMACSS has five file types where ITCSS has seven. SMACSS says sometimes style elements but mostly use classes where OOCSS says never style elements only use classes. They both despise ids, aww.
+SMA stand for Scalable and Modular Architecture and is a lot like a combination of ITCSS and OOCSS. There are some particular differences like SMACSS has five categories where ITCSS has seven. SMACSS says sometimes style elements but mostly use classes where OOCSS says never style elements only use classes. They both despise ids, aww.
 
 There's [a whole book](https://smacss.com) written by the inventor of SMACSS, Jonathan Snook, which you can read mostly for free or buy if you are nice and want the premium content. 
 
@@ -109,12 +109,12 @@ BEM is written like this (via [good ol Harry](http://csswizardry.com/2013/01/min
 
 The benefits of BEM are pretty obvious, you can tell what sort of thing a selector is just by reading its name. But! you have to be diligent about thinking in OOCSS or you will write something like this `.footer__contact-info--red-border`. That is incredibly not modular, wow. 
 
-I do think you end up sacrificing a little modularity by using BEM — a modifier is tied to its block when it could be useful elsewhere — but the gains you make in consistency and readability are probably worth it, especially when working with big teams over long periods of time. Having everyone doing things the same way is probably the biggest benefit of adopting any of these systems.
+I do think you end up sacrificing a little modularity by using BEM — a modifier is tied to its block when it could be useful elsewhere — but the gains you make in consistency and readability are likely worth it, especially when working with big teams over long periods of time. Having everyone doing things the same way is probably the biggest benefit of adopting any of these systems.
 
 There's [a whole site about BEM](http://getbem.com) you can dig into. Actually there are [two sites about BEM](https://en.bem.info).
 
 ## Atomic CSS
-Now if you want to talk mega modularity let's talk Atomic CSS which was unveiled by Thierry Koblentz in his article [Challenging CSS Best Practices](https://www.smashingmagazine.com/2013/10/challenging-css-best-practices-atomic-approach). Atomic is probably not the best for big teams and projects as there's a danger of conflicts if too many people jump in. But if you just want to shralp a small site by your lonesome oh boy. The first site I tried to develop using OOCSS principles I ended up writing very atomic-like code without even knowing it. 
+Now if you want to talk mega modularity let's talk Atomic CSS shall we? It was unveiled by Thierry Koblentz in his article [Challenging CSS Best Practices](https://www.smashingmagazine.com/2013/10/challenging-css-best-practices-atomic-approach). Atomic is probably not the best for big teams and projects as there's a danger of conflicts if too many people jump in (though Thierry would [disagree](https://twitter.com/thierrykoblentz/status/854461952852074496)). But if you just want to shralp a small site by your lonesome oh boy. The first site I tried to develop using OOCSS principles I ended up writing very atomic-like code without even knowing it. 
 
 With Atomic you write selectors like `.m-t-border` and just slap those puppies all over the place. `m-t-border means medium top border`, you don't even have time to write whole words you're moving so fast. You develop an artisanal of tiny design components that can be applied all over the place and your HTML ends up looking like:
 
