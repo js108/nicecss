@@ -67,11 +67,11 @@ The code looks like this:
 
 And thus you have gone a long way towards designing the monster that's eating the fourth estate and pooping out fake news. 
 
-The two main principles of OOCSS are *separate structure from skin* and *separate container from content*. Separating structure from skin means that your declarations regarding things like positioning, size, margins and so forth go in a different ruleset than declarations with fonts, colors, and borders. Separating container from content means that you don't specify whether something is is footer content, main content, for a blog, or whatever. If you did that then your CSS wouldn't be reusable.
+The two main principles of OOCSS are *separate structure from skin* and *separate container from content*. Separating structure from skin means that your declarations regarding things like positioning, size, margins and so forth go in a different ruleset than declarations with fonts, colors, and borders. Separating container from content means that you don't specify whether something is footer content, main content, for a blog, or whatever. If you did that then your CSS wouldn't be reusable.
 
 In practice when writing OOCSS you'll notice that you tend to write rule sets that have one or two declarations rather than three, four, or more. If you find yourself writing novel length works you're probably not thinking in OOCSS.
 
-There's a lot out there about [how spcifically OOCSS should be writen](https://ianstormtaylor.com/oocss-plus-sass-is-the-best-way-to-css), which is often compelling and worth looking into, but IMO OOCSS really has the most value when appreciated as a principle rather than a collection rules. Which is also true of a lot of other things. And as you'll see the methodologies to come are getting increasingly prescriptive and generally work well with OOCSS principles.
+There's a lot out there about [how spcifically OOCSS should be writen](https://ianstormtaylor.com/oocss-plus-sass-is-the-best-way-to-css), which is often compelling and worth looking into, but IMO OOCSS really has the most value when appreciated as a principle rather than a collection of rules. Which is also true of a lot of other things. And as you'll see the methodologies to come are increasingly prescriptive and generally work well with OOCSS principles.
 
 If you want to learn more about OOCSS here's [an intro article](https://www.smashingmagazine.com/2011/12/an-introduction-to-object-oriented-css-oocss) and [the official github](https://github.com/stubbornella/oocss/wiki).
 
@@ -80,11 +80,11 @@ SMA stand for Scalable and Modular Architecture and is a lot like a combination 
 
 There's [a whole book](https://smacss.com) written by the inventor of SMACSS, Jonathan Snook, which you can read mostly for free or buy if you are nice and want the premium content. 
 
-There's a bunch of articles [comparing OOCSS and SMACSS](https://www.sitepoint.com/bem-smacss-advice-from-developers) that sometimes gets insanely technical and maybe matters but probably doesn't. Your two choices are ultimately not SMACSS vs OOCSS but rather fucking things up vs spending all your time trying to develop the prefect set up that will prevent you from fucking up.
+There's a bunch of articles [comparing OOCSS and SMACSS](https://www.sitepoint.com/bem-smacss-advice-from-developers) that sometimes get insanely technical and maybe matter but probably doen't. Your two choices are ultimately not SMACSS vs OOCSS but rather fucking things up vs spending all your time trying to develop the prefect set up that will prevent you from fucking up.
 
-SMACSS is pronounced *smacks* which is fun. ITCSS is pronounced *its* which is confusing. OOCSS is pronounced *ocean*, not really.
+SMACSS is pronounced *smacks* which is fun. ITCSS is pronounced *its* which is confusing. OOCSS is pronounced *ocean*, just kidding.
 
-Here's an [intro to SMACSS](http://vanseodesign.com/css/smacss-introduction) and  [a video about OOCSS, SMACSS, and BEM](https://youtu.be/IKFq2cSbQ4Q), which is also where I encountered the concept of Shames.
+Here's an [intro to SMACSS](http://vanseodesign.com/css/smacss-introduction) and  [a video about OOCSS, SMACSS, and BEM](https://youtu.be/IKFq2cSbQ4Q), which is where I encountered the concept of Shames.
 
 ## BEM
 Block__Element--Modifier is a system for naming selectors developed by [the Russian Google](https://www.yandex.com). You could use it on its own and probably extrapolate a system much like OOCSS from it, but many people use it in conjunction with OOCSS or SMACSS. 
@@ -107,7 +107,7 @@ BEM is written like this (via [good ol Harry](http://csswizardry.com/2013/01/min
 .person__hand--left {}
 ```
 
-The benefits of BEM are pretty obvious, you can tell what sort of thing a selector is just by reading its name. But! you have to be diligent about thinking in OOCSS or you will write something like this `.footer__contact-info--red-border`. That's incredibly not modular, wow. 
+The benefits of BEM are pretty obvious, you can tell what sort of thing a selector is just by reading its name. But! you have to be diligent about thinking in OOCSS or you will write something like this `.footer__contact-info--red-border`. That is incredibly not modular, wow. 
 
 I do think you end up sacrificing a little modularity by using BEM — a modifier is tied to its block when it could be useful elsewhere — but the gains you make in consistency and readability are probably worth it, especially when working with big teams over long periods of time. Having everyone doing things the same way is probably the biggest benefit of adopting any of these systems.
 
@@ -124,7 +124,7 @@ With Atomic you write selectors like `.m-t-border` and just slap those puppies a
 </div>
 ```
 
-It's kinda insane. Atomic CSS breaks all the rules, oh yeah!
+It's nuts bro. Atomic CSS breaks all the rules, OH YEAH!
 
 Here's [an intro to Atomic CSS](https://www.lucidchart.com/techblog/2014/01/31/atomic-css-tool-set) and [the Atomic CSS site](https://acss.io).
 
