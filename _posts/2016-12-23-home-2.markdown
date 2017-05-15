@@ -8,7 +8,7 @@ I built this site using ITCSS, OOCSS, and BEM, which is insanely huge overkill. 
 
 For the backend I used the static site generator [Jekyll](https://jekyllrb.com/) which spits out a fast, secure site that you can host for free on GitHub. It has a nice, simple dev environment with its own server and preprocessor listener. 
 
-I wrote this text in Markdown, which did present some obstacles to NICE CSS, as it generates its own HTML that can't be easily modified. My solution, after great deliberation, was to leave it as is. Though I did switch flavors from kramdown to redcarpet because it's a little less verbose. 
+I wrote this text in Markdown, which did present some obstacles to NICE CSS, as it generates its own HTML that can't be easily modified. My solution, after great deliberation, was to leave it as is.
 
 Publishing date is January 17th, 2017. Here's the repoLINK. 
 
