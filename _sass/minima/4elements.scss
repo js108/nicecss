@@ -1,9 +1,5 @@
-code {
-}
-
-pre {
-	white-space: pre-wrap;
-	word-wrap: break-word;
+body {
+	background-color: $secondary-color;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -16,18 +12,20 @@ p {
 	font-family: $body-font;
 }
 
-p img {
-	padding: 5% 0;
-}
-
-p+h2, {
+p+h2 {
 	margin-top: 2em;
 }
 
-body {
-	background-color: $secondary-color;
+img {
+	margin: 5% 0;
 }
 
-a, a:visited {
+a {
 	color: #fff;
+}
+
+pre {
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	margin: 0;
 }

@@ -1,33 +1,15 @@
-.wrap-center {
+.layout-wrap {
 	max-width: 840px;
 	width: 100%;
 	margin: 0 auto;
 }
 
-.title-head {
-	font-size: 250%;
-	font-size: 3.5vw;
-}
-
-.title-head__padding {
-	padding: $section-padding;
-}
-
-.section-border {
-	border-bottom: 10px dashed $tertiary-color;
-}
-
-.body-text {
-	color: #fff;
-	font-size: 150%;
-} 
-
-.body-text__padding {
-	padding: $section-padding;
+.content {
+	padding: 5%;
 }
 
 .highlight {
-	padding: 2em;
+	padding: 10%;
 	background-color: $tertiary-color;
 }
 

@@ -4,19 +4,22 @@ categories: home-2
 ---
 
 ##This Site
-I built this site using ITCSS, OOCSS, and BEM, whic is insanely huge overkill. But I figured why not practice what I preach. For the backend I used the static site generator [Jekyll](https://jekyllrb.com/) which spits out a fast secure site that you can host for free on GitHub. It's has a nice simple dev envitonment with its own server and preprocessor listener. 
+I built this site using ITCSS, OOCSS, and BEM, which is insanely huge overkill. But I figured why not practice what I preach. And my practice is far from perfect. It's pretty hard to break old habits and wrap your head around these concepts. This exercise has, in some ways, provoked more questions than it's answered. Like should all BEM elements go in the same file as their blocks?
 
-I wrote this text in Markdown, which did present some obsitcals to writing NICE CSS as it generates its own html that cant easily be changed. My solution after some fiddling was to leave it as is. Though tbf I did change the   
+For the backend I used the static site generator [Jekyll](https://jekyllrb.com/) which spits out a fast, secure site that you can host for free on GitHub. It has a nice, simple dev environment with its own server and preprocessor listener. 
 
-Here's the repoLINK. 
+I wrote this text in Markdown, which did present some obstacles to NICE CSS, as it generates its own HTML that can't be easily modified. My solution, after great deliberation, was to leave it as is. Though I did switch flavors from kramdown to redcarpet because it's a little less verbose. 
+
+Publishing date is January 17th, 2017. Here's the repoLINK. 
 
 ##Me
-My name is Joe. I design all sorts of physical and virtual things. I build websites too. If you'd like me to do some work for you or you just enjoy pointing out typos feel free to email joe at joeschoech dot com. 
+My name is Joe. I design physical and virtual things and build websites. If you'd like me to do some work for you, or you just enjoy telling people they're doing it wrong, feel free to email joe at joeschoech dot com. 
 
 I like basketball and reading. Here's something I wrote about how [I hate ESPN's website](https://medium.com/@on3ness/the-nightmare-online-espn-go-com-475d1d31b391#.hkc3tkagp).
 
-
-SEMANTICS
-AUTHORS NAMES
 SPELL CHECK
-git ignore
+conclusion
+atomic inline/encapsulation
+nice css explain it more? it just goes away?
+DATE
+ITCSS specificity

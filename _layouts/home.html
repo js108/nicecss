@@ -17,33 +17,33 @@
 </head>
 
 <body>
-	<div class="wrap-center">
-		<header class="title-head title-head__padding title-head__font-size">
+	<div class="layout-wrap">
+		<header class="content content__title-text">
 			<h1>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</h1>
 		</header>
 	</div>
 
-	<div class="section-border"></div>
+	<div class="section-divider">
+		<div class="layout-wrap">
+			<div class="content content__body-text">
 
-	<div class="wrap-center">
-		<div class="body-text body-text__padding">
+				{% for post in site.categories.home-1 %}
+				    {{ post.content  }}
+				{% endfor %}
 
-			{% for post in site.categories.home-1 %}
-			    {{ post.content  }}
-			{% endfor %}
-
+			</div>
 		</div>
 	</div>
 
-	<div class="section-border"></div>
+	<div class="section-divider">
+		<div class="layout-wrap">
+			<div class="content content__body-text">
 
-	<div class="wrap-center">
-		<div class="body-text body-text__padding">
+				{% for post in site.categories.home-2 %}
+				    {{ post.content  }}
+				{% endfor %}
 
-			{% for post in site.categories.home-2 %}
-			    {{ post.content  }}
-			{% endfor %}
-
+			</div>
 		</div>
 	</div>
 </body>

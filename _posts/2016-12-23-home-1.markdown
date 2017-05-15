@@ -2,41 +2,45 @@
 title:  "How To Be A Nice CSS Boy"
 categories: home-1
 ---
-Why should one write NICE CSS? Because it's nice. It's considerate to those who will work on a website after you, including your future self. In this way there is no need to differntiate between yourself and others, you can simply be nice.
+What is NICE CSS? It's CSS that's considerate to those who will work on a website after you, including your future self. In this way there is no need to differentiate between yourself and others, you can simply be nice.
 
-This is a documentation of my attempt to understand how to write CSS that isn't a mess and doesn't turn into a mess down the road. In doing so I reviewed my knowledge of CSS fundimentals and studied some of the methoslogies that attempt to help you write sensible, organized CSS. 
+Is NICE CSS a real thing? No, it's just the name I gave my attempt to understand how to write CSS that isn't a mess and doesn't turn into a mess down the road.
 
-To be clear I'll be focusing on writing CSS so it's easily maitianable, resuable, and readable; and focusing not as much on the aspects of load time, file size, time to first meaningful paint and so forth. Speed is super important but is outside of the scope of this investigation. It's also, it should be noted, occsionally [in conflict with nice CSS](https://css-tricks.com/authoring-critical-fold-css). If you're interested learning about making sites load fast [this article is insane](https://hackernoon.com/10-things-i-learned-making-the-fastest-site-in-the-world-18a0e1cdf4a7#.us7gkl3vz). And [the site](https://knowitall-9a92e.firebaseapp.com) described therein is super useful. I used it to learn what I didn't know about HTML and CSS. Spoiler I didn't know a lot. I know more now.
+Why should we write NICE CSS? Because it's nice.  
 
-One thing you'll notice throughout this article is people attempting to apply principals of computer science — encapsulation, reusabilty, modularity SMAE TING etc — to the wild, desinger infested world of CSS. Of course it's not just designers who write the bad css insipering these reforms, CS PHDs do too. Everyone is subject to writing bad CSS. Part of the reason for this is because CSS and its partner in crime HTML are very flexible, they don't demand much structural integrity from their practitioners. Which is great for begingers and non-experts, but causes problems for non-beginers and experts who're trying to write senisble code. So a lot of what we're looking at here is retrofitting practices that more *real* laguges have built in to a situation that is by nature very loosygoosey. 
+Mostly this article is about attempting to apply principals of computer science — encapsulation, modularity, DRY etc — to the wild, designer infested world of CSS. Of course it's not just designers who write the bad CSS, CS PHDs do too. Everyone is subject to writing bad CSS. Part of the reason is CSS and its partner in crime HTML are super flexible and forgiving, they don't demand much structural integrity from their practitioners. Which is great for beginners and non-experts, but causes problems for non-beginners and experts who're trying to write sensible code. 
 
-The methodologies I looked at are ITCSS, OOCSS, SMACSS, BEM, and Atomic CSS. Some of them occupy the same space and are conflicting while others are complimentary and can be used together. Rougly ITCSS is a way to higherarchacly organize your CSS files; OOCSS is a technical philosphys; SMACCS is a technical phiosphy and a way to organize your CSS files, BEM is a CSS naming convention, and ATOMIC CSS is a method for breaking modularity down to the atomic level. Even among the systems that occupy different spaces there's a fair amount of overlap because fundimentally they're all trying to make you think sysematically about your code.
+I'll be focusing on writing CSS so it's easily maintainable, reusable, and readable — and not really worrying about the aspects of load time, file size, time to first meaningful paint and so forth. Speed is outside of the scope of this investigation. Speed is also occasionally [in conflict with NICE CSS](https://css-tricks.com/authoring-critical-fold-css). If you're interested learning about making sites load fast [this article is insane](https://hackernoon.com/10-things-i-learned-making-the-fastest-site-in-the-world-18a0e1cdf4a7#.us7gkl3vz). And [the site](https://knowitall-9a92e.firebaseapp.com) described therein is super useful. I used it to learn what I didn't know about HTML and CSS. Spoiler I didn't know a lot. I know some more now.
+
+In attempting to write NICE CSS I looked at the methodologies: ITCSS, OOCSS, SMACSS, BEM, and Atomic CSS. Some of them occupy the same space and are conflicting while others are complimentary and can be used together. Roughly: ITCSS is a way of hierarchically organizing your CSS, OOCSS is a technical philosophy, SMACCS is a technical philosophy and a way of organizing your CSS, BEM is a naming convention, and ATOMIC CSS is a method for breaking modularity down to the atomic level. Even among the systems that occupy different spaces there's a fair amount of overlap because fundamentally they're all trying to make you think systematically about your code.
+
+You'll notice that these systems challenge the once sacred, specification endowed wisdoms of *semanticness* and other *best practices*. Here's [an article about that](https://tympanus.net/codrops/2013/01/22/defending-presentational-class-names) and [another one](http://www.stubbornella.org/content/2011/04/28/our-best-practices-are-killing-us).
 
 ##ITCSS
-ITCSS is a system of organizing your CSS in files so that you'll always know where to put and find things rather than just adding new selctors to the end of a file. This amoungst other things helps aviod source order conflicts because the source is in a meaningful order. It's specifically intended to help large teams stay on the same page. It was developed by Harry Roberts who anyone who has ever tried to google away their CSS problems will know as CSS Wizardry. 
-
-The system is depectited in my inverted triangle diagram below. In fact the IT stands for inverted triangle. 
+ITCSS is a system of organizing your CSS so you'll always know where to put and find things rather than just adding new selectors to the end of a file. This, amongst other benefits, keeps you from getting stuck in weird specificity potholes and avoids source order conflicts because you've arranged the source in a meaningful order. It's specifically intended to help large teams stay on the same page. It was developed by [Harry Roberts](http://csswizardry.com), who anyone who has ever tried to google away their CSS problems will know as CSS Wizardry. 
 
 ![itcss](/assets/itcss.svg)
 
-As you can see the triangle drills down through the specificity graph. The first two levels, Seetings and Tools, are for your preprocessor specific stuff: varibles, mixins, and extends.  
+The system is depicted in my inverted triangle diagram. In fact the IT stands for inverted triangle. 
+
+As you can see the triangle drills down through the specificity graph. The first two levels, Settings and Tools, are for preprocessor stuff: variables, [mixins, extends](http://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin), and so forth.
 
 The next level, Generic, is for browser resets. 
 
-Then the Elements layer is where you put all those selctors like `p`, `h1`, and `body` that aren't classes or ids. 
+Then the Elements layer is where you put all those selectors like `p`, `h1`, and `body` that aren't classes or ids. 
 
-Objects, more than halfway down the triangle, is where we really start to write our CSS. Objects here refers to the first O in OOCS which we'll get to in a moment. Basically you put general, resuable, not overly styled, design paterns in here — like for instance a block constaining an image and some text. 
+Objects refers to the first O in OOCSS, which is the system we'll talk about next. You put general, reusable, not overly styled, design patterns in here — like maybe a block containing an image and some text. 
 
-In Components we put our more visually designy things like buttons and fonts and so forth. 
+In Components we put our more visually designy things like buttons and dotted lines and so forth. 
 
-Finally there's Trumps. The term will be familiar to players of card games in the bridge family. This where we put selectors that we absolutly want to override everything else. Let's say you had some Arabic text that needed to read right to left and you wanted to be absolutly sure that nothing would ever overide it, you could put it in here. Generally all these systems hate id selectors due to their tendancy to nuke your specficity graph. But Harry says it's ok to put some in here.
+Finally there's Trumps. The term will be familiar to players of card games in the bridge family. This where we put selectors that we absolutely want to override everything else. Let's say you had some Arabic text that needed to read right to left and you wanted to be absolutely sure that nothing would ever tell it to read right to left, you could put it in here. All these systems hate id selectors due to their tendency to nuke your specificity graph. But Harry says it's ok to put some in trumps.
 
-Harry said it's fine to add and subtract new triangle levels tosuit your uses. In doing the study that resulted in this piece I came across a concept that I think fits well here it's called Shames. This is where you put code that doesn't adhear to the principals of nice css. Things you need to refactor. At least they'll be all in one place where it's harder to ignore them. If you're using a version tracker it's easy for everyone on the team to shame each other too. I put it at the bottom of the triangle though I'm not sure that's the best place for it.
+It's fine to add and subtract new triangle levels to suit your needs. In my travels I came across a concept that works well here. It's called Shames. This is where you put code that doesn't adhere to the principals of nice css. Things you need to refactor. At least they'll be all in one place where it's harder to ignore them. If you're using a version tracker it's easy for everyone on the team to shame each other too. I put it at the bottom of the triangle though I'm not sure that's the best place for it.
 
-There's not a ton of information about ITCSS out there yet as it's pretty new. In fact Harry hasn't even offically launched [the site](http://itcss.io) ascosited with it. But I found this video LINK of Harry talking about it, and a blog post where someone digs into a project of his they found on github LINK.
+There's not a ton of information about ITCSS out there yet as it's pretty new. In fact Harry hasn't even officially launched [the site](http://itcss.io). But there is [a video of Harry talking about it](https://youtu.be/1OKZOV-iLj4), and [a blog post that includes project of his on github](http://www.hongkiat.com/blog/inverted-triangle-css-web-development).
 
 ##OOCSS
-Object Orineted Cascading Style Sheets is the grandaddy of them all. It all started with [a descptively simple insight](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code) by Nicole Sullivan that you could employ a tiny repeatable design pattern consisting of an image and some text to position pretty much every facebook post. It, she says, *saves hundereds of lines of code*. And so it does.
+Object Oriented Cascading Style Sheets is the granddaddy of em all. It all started with [a descptively simple insight](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code) by Nicole Sullivan that you could employ a tiny repeatable design pattern consisting of an image and some text to position pretty much every facebook post. It, she says, *saves hundreds of lines of code*. And so it does.
 
 The code looks like this:
 
@@ -62,23 +66,27 @@ The code looks like this:
 
 And thus you have gone a long way towards designing the monster that's eating the fourth estate and pooping out fake news. 
 
-The two main principals of OOCSS are *separate structure from skin* and *separate container from content*. Separating structure from skin means that your declirations reguarding things like possistioning, size, margins and so forth go in a different ruleset than declirations with fonts, colors, and borders. ingeparate container from content means that you don't specify whether something is is footer content, main content, for a blog, or whatever. If you did that then your css wouldn't be resuable.
+The two main principles of OOCSS are *separate structure from skin* and *separate container from content*. Separating structure from skin means that your declarations regarding things like positioning, size, margins and so forth go in a different ruleset than declarations with fonts, colors, and borders. Separating container from content means that you don't specify whether something is is footer content, main content, for a blog, or whatever. If you did that then your CSS wouldn't be reusable.
 
-In practice when writing OOCSS you'll notice that you tend to write rule sets that have one or two declirations rather than three four or more. If you find yourself writing novel length works you're probably not thinking in OOCSS.
+In practice when writing OOCSS you'll notice that you tend to write rule sets that have one or two declarations rather than three, four, or more. If you find yourself writing novel length works you're probably not thinking in OOCSS.
 
-There's a lot out there about how spcifically OOCSS should be writen, which is often compelling and worth looking into, but IMO OOCSS really has the most value when apprcited as a principle rather than a bunch of rules. Which is also true of a lot of other things. Also as you will see the methodologies to come are getting increasingly perscriptive and generally work well with OOCSS principals.
+There's a lot out there about [how spcifically OOCSS should be writen](https://ianstormtaylor.com/oocss-plus-sass-is-the-best-way-to-css), which is often compelling and worth looking into, but IMO OOCSS really has the most value when appreciated as a principle rather than a collection rules. Which is also true of a lot of other things. And as you'll see the methodologies to come are getting increasingly prescriptive and generally work well with OOCSS principles.
 
-IF you want to read more about OOCSS here'sa couple sources LINK LINK
+If you want to learn more about OOCSS here's [an intro article](https://www.smashingmagazine.com/2011/12/an-introduction-to-object-oriented-css-oocss) and [the official github](https://github.com/stubbornella/oocss/wiki).
 
 ##SMACSS
-SMA stand for Scalable and Modular Architecture and is a lot like a combination of ITCSS and OOCSS. There are some particular differnces like SMACSS has five file types where ITCSS has seven. SMACSS says sometimes style elements but mostly use classes where OOCSS says never style elements only use classes. They both despise ids, aww.
+SMA stand for Scalable and Modular Architecture and is a lot like a combination of ITCSS and OOCSS. There are some particular differences like SMACSS has five file types where ITCSS has seven. SMACSS says sometimes style elements but mostly use classes where OOCSS says never style elements only use classes. They both despise ids, aww.
 
-There's [a whole book](https://smacss.com) written by the inventor of SMACSS which you can read for mostly free online or buy if you are nice and want the premium content. There's also a ton of stuff comparing OOCSS and SMACSS that sometimes gets insanely technical and maybe matter but probably doesn't. Your two choices are ultimately not SMACSS vs OOCSS but rather fucking things up vs spending all your time trying to devlep the prefect set up that will prevent you from fucking up.
+There's [a whole book](https://smacss.com) written by the inventor of SMACSS, Jonathan Snook, which you can read mostly for free or buy if you are nice and want the premium content. 
+
+There's a bunch of articles [comparing OOCSS and SMACSS](https://www.sitepoint.com/bem-smacss-advice-from-developers) that sometimes gets insanely technical and maybe matters but probably doesn't. Your two choices are ultimately not SMACSS vs OOCSS but rather fucking things up vs spending all your time trying to develop the prefect set up that will prevent you from fucking up.
 
 SMACSS is pronounced *smacks* which is fun. ITCSS is pronounced *its* which is confusing. OOCSS is pronounced *ocean*, not really.
 
+Here's an [intro to SMACSS](http://vanseodesign.com/css/smacss-introduction) and  [a video about OOCSS, SMACSS, and BEM](https://youtu.be/IKFq2cSbQ4Q), which is also where I encountered the concept of Shames.
+
 ##BEM
-Block__Element--modifier is a way of writing class names. You could use it on its own and probably extrpolate a system much like OOCSS from it, but many people use it in conjuction with OOCSS or SMACSS to add the final piece making their naming conventions consitant and meaningful. 
+Block__Element--Modifier is a system for naming selectors developed by [the Russian Google](https://www.yandex.com). You could use it on its own and probably extrapolate a system much like OOCSS from it, but many people use it in conjunction with OOCSS or SMACSS. 
 
 BEM is written like this (via [good ol Harry](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax)):
 
@@ -98,16 +106,16 @@ BEM is written like this (via [good ol Harry](http://csswizardry.com/2013/01/min
 .person__hand--left {}
 ```
 
-The benfits of BEM are pretty obvious, you can tell what sort of thing a selector is just by reading its name. But! you have to be diligent about thinking in OOCSS or you will want to write something like this .footer__contact-info--red-border. That's incredibly not modular, wow. 
+The benefits of BEM are pretty obvious, you can tell what sort of thing a selector is just by reading its name. But! you have to be diligent about thinking in OOCSS or you will write something like this `.footer__contact-info--red-border`. That's incredibly not modular, wow. 
 
-I do think you end up sacrificing a little modularity by using BEM REASON but the gains you make in consistancy and readablity are probably worth it espcailly when working with big teams over long periods of time. Having everyone doing things the same way probably the biggest benifit of adopting any of these systems.
+I do think you end up sacrificing a little modularity by using BEM — a modifier is tied to its block when it could be useful elsewhere — but the gains you make in consistency and readability are probably worth it, especially when working with big teams over long periods of time. Having everyone doing things the same way is probably the biggest benefit of adopting any of these systems.
 
-There's a whole site about BEM you can dig into here.
+There's [a whole site about BEM](http://getbem.com) you can dig into. Actually there are [two sites about BEM](https://en.bem.info).
 
 ##Atomic CSS
-Now if you want to talk mega modularity let's talk Atomic. Disclaimer: Atomic is probably not the best for big teams and projects. But if you just want to shralp a small site by your lonesome oh boy. The first site I tried to develop using OOCSS pricipals I ended up writing very atomic-like code without even knowing it. 
+Now if you want to talk mega modularity let's talk Atomic CSS which was unveiled by Thierry Koblentz in his article [Challenging CSS Best Practices](https://www.smashingmagazine.com/2013/10/challenging-css-best-practices-atomic-approach). Atomic is probably not the best for big teams and projects as there's a danger of conflicts if too many people jump in. But if you just want to shralp a small site by your lonesome oh boy. The first site I tried to develop using OOCSS principles I ended up writing very atomic-like code without even knowing it. 
 
-With Atomic you write selectors like `.m-t-border` and just slap those puppies all over the place. m-t-border means medium top border, you don't even have time to write whole words you're moving so fast 0_0. You develop an arisinal of tiny design components that can be applied all over the place and your html ends up looking like:
+With Atomic you write selectors like `.m-t-border` and just slap those puppies all over the place. `m-t-border means medium top border`, you don't even have time to write whole words you're moving so fast. You develop an artisanal of tiny design components that can be applied all over the place and your HTML ends up looking like:
 
 ```
 <div class="m-t-border float-l bg-dark bricks-flying">
@@ -115,10 +123,10 @@ With Atomic you write selectors like `.m-t-border` and just slap those puppies a
 </div>
 ```
 
-It's kind of insane and great. Atomic CSS is the bad kid who breaks all the rules, oh yeah!
+It's kinda insane. Atomic CSS breaks all the rules, oh yeah!
 
-LINKS
+Here's [an intro to Atomic CSS](https://www.lucidchart.com/techblog/2014/01/31/atomic-css-tool-set) and [the Atomic CSS site](https://acss.io).
 
 
-##Final Musings
-If you're writing CSS with no particular organizing principal besides *finish the website* try one of these systems, it will improve your life, prbably extremely minutly. If you run a team or a business that builds or maintains websites for god's sake take pity on your employees and adopt one or more of these systems.
+##Concluding Musings
+If you're writing CSS with no particular organizing principal besides *finish the website* try one of these systems, it will improve your life, probably extremely minutely. If you run a team or a business that builds or maintains websites for god's sake take pity on your employees and adopt one or more of these systems.
