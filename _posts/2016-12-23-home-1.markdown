@@ -16,7 +16,7 @@ In attempting to write NICE CSS I looked at the methodologies: ITCSS, OOCSS, SMA
 
 You'll notice that these systems challenge the once sacred, specification endowed wisdoms of *semanticness* and other *best practices*. Here's [an article about that](https://tympanus.net/codrops/2013/01/22/defending-presentational-class-names) and [another one](http://www.stubbornella.org/content/2011/04/28/our-best-practices-are-killing-us).
 
-#ITCSS
+## ITCSS
 
 ITCSS is a system of organizing your CSS so you'll always know where to put and find things rather than just adding new selectors to the end of a file. This, amongst other benefits, keeps you from getting stuck in weird specificity potholes and avoids source order conflicts because you've arranged the source in a meaningful order. It's specifically intended to help large teams stay on the same page. It was developed by [Harry Roberts](http://csswizardry.com), who anyone who has ever tried to google away their CSS problems will know as CSS Wizardry. 
 
@@ -40,7 +40,7 @@ It's fine to add and subtract new triangle levels to suit your needs. In my trav
 
 There's not a ton of information about ITCSS out there yet as it's pretty new. In fact Harry hasn't even officially launched [the site](http://itcss.io). But there is [a video of Harry talking about it](https://youtu.be/1OKZOV-iLj4), and [a blog post that includes project of his on github](http://www.hongkiat.com/blog/inverted-triangle-css-web-development).
 
-##OOCSS
+## OOCSS
 Object Oriented Cascading Style Sheets is the granddaddy of em all. It all started with [a descptively simple insight](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code) by Nicole Sullivan that you could employ a tiny repeatable design pattern consisting of an image and some text to position pretty much every facebook post. It, she says, *saves hundreds of lines of code*. And so it does.
 
 The code looks like this:
@@ -75,7 +75,7 @@ There's a lot out there about [how spcifically OOCSS should be writen](https://i
 
 If you want to learn more about OOCSS here's [an intro article](https://www.smashingmagazine.com/2011/12/an-introduction-to-object-oriented-css-oocss) and [the official github](https://github.com/stubbornella/oocss/wiki).
 
-##SMACSS
+## SMACSS
 SMA stand for Scalable and Modular Architecture and is a lot like a combination of ITCSS and OOCSS. There are some particular differences like SMACSS has five file types where ITCSS has seven. SMACSS says sometimes style elements but mostly use classes where OOCSS says never style elements only use classes. They both despise ids, aww.
 
 There's [a whole book](https://smacss.com) written by the inventor of SMACSS, Jonathan Snook, which you can read mostly for free or buy if you are nice and want the premium content. 
@@ -86,7 +86,7 @@ SMACSS is pronounced *smacks* which is fun. ITCSS is pronounced *its* which is c
 
 Here's an [intro to SMACSS](http://vanseodesign.com/css/smacss-introduction) and  [a video about OOCSS, SMACSS, and BEM](https://youtu.be/IKFq2cSbQ4Q), which is also where I encountered the concept of Shames.
 
-##BEM
+## BEM
 Block__Element--Modifier is a system for naming selectors developed by [the Russian Google](https://www.yandex.com). You could use it on its own and probably extrapolate a system much like OOCSS from it, but many people use it in conjunction with OOCSS or SMACSS. 
 
 BEM is written like this (via [good ol Harry](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax)):
@@ -113,7 +113,7 @@ I do think you end up sacrificing a little modularity by using BEM — a modifie
 
 There's [a whole site about BEM](http://getbem.com) you can dig into. Actually there are [two sites about BEM](https://en.bem.info).
 
-##Atomic CSS
+## Atomic CSS
 Now if you want to talk mega modularity let's talk Atomic CSS which was unveiled by Thierry Koblentz in his article [Challenging CSS Best Practices](https://www.smashingmagazine.com/2013/10/challenging-css-best-practices-atomic-approach). Atomic is probably not the best for big teams and projects as there's a danger of conflicts if too many people jump in. But if you just want to shralp a small site by your lonesome oh boy. The first site I tried to develop using OOCSS principles I ended up writing very atomic-like code without even knowing it. 
 
 With Atomic you write selectors like `.m-t-border` and just slap those puppies all over the place. `m-t-border means medium top border`, you don't even have time to write whole words you're moving so fast. You develop an artisanal of tiny design components that can be applied all over the place and your HTML ends up looking like:
@@ -129,5 +129,5 @@ It's kinda insane. Atomic CSS breaks all the rules, oh yeah!
 Here's [an intro to Atomic CSS](https://www.lucidchart.com/techblog/2014/01/31/atomic-css-tool-set) and [the Atomic CSS site](https://acss.io).
 
 
-##Concluding Musings
+## Concluding Musings
 If you're writing CSS with no particular organizing principal besides *finish the website* try one of these systems, it will improve your life, probably extremely minutely. If you run a team or a business that builds or maintains websites for god's sake take pity on your employees and adopt one or more of these systems.

@@ -3,7 +3,7 @@ title:  "How To Be A Nice CSS Boy"
 categories: home-2
 ---
 
-##This Site
+## This Site
 I built this site using ITCSS, OOCSS, and BEM, which is insanely huge overkill. But I figured why not practice what I preach. And my practice is far from perfect. It's pretty hard to break old habits and wrap your head around these concepts. This exercise has, in some ways, provoked more questions than it's answered. Like should all BEM elements go in the same file as their blocks?
 
 For the backend I used the static site generator [Jekyll](https://jekyllrb.com/) which spits out a fast, secure site that you can host for free on GitHub. It has a nice, simple dev environment with its own server and preprocessor listener. 
@@ -12,14 +12,7 @@ I wrote this text in Markdown, which did present some obstacles to NICE CSS, as 
 
 Publishing date is January 17th, 2017. Here's the repoLINK. 
 
-##Me
+## Me
 My name is Joe. I design physical and virtual things and build websites. If you'd like me to do some work for you, or you just enjoy telling people they're doing it wrong, feel free to email joe at joeschoech dot com. 
 
 I like basketball and reading. Here's something I wrote about how [I hate ESPN's website](https://medium.com/@on3ness/the-nightmare-online-espn-go-com-475d1d31b391#.hkc3tkagp).
-
-SPELL CHECK
-conclusion
-atomic inline/encapsulation
-nice css explain it more? it just goes away?
-DATE
-ITCSS specificity
