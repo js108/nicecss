@@ -4,7 +4,7 @@ categories: home-2
 ---
 
 ## This Site
-I built this site using ITCSS, OOCSS, and BEM, which is insanely huge overkill. But I figured why not practice what I preach. And my practice is far from perfect. It's pretty hard to break old habits and wrap your head around these concepts. This exercise has, in some ways, provoked more questions than it's answered. Like should all BEM elements go in the same file as their blocks?
+I built this site using ITCSS, OOCSS, and BEM, which is insanely huge overkill. But I figured why not practice what I preach. And my practice is far from perfect. It's pretty hard to break old habits and wrap your head around these concepts. This exercise has, in some ways, provoked more questions than it's answered. Like *should all BEM elements go in the same file as their blocks?* and *am I just going along with conventional wisdom re the problems with Atomic CSS when maybe its just awesome and not problematic?* 
 
 For the backend I used the static site generator [Jekyll](https://jekyllrb.com/) which spits out a fast, secure site that you can host for free on GitHub. It has a nice, simple dev environment with its own server and preprocessor listener. Static site generators are good IMHO.
 
