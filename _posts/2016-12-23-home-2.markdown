@@ -10,7 +10,7 @@ For the backend I used the static site generator [Jekyll](https://jekyllrb.com/)
 
 I wrote this text in Markdown, which did present some obstacles to NICE CSS, as it generates its own HTML that can't be easily modified. My solution, after great deliberation, was to leave it as is.
 
-Publishing date is January 17th, 2017. Here's the [repo](https://github.com/js108/nicecss). 
+Publishing date is May 15th, 2017. Here's the [repo](https://github.com/js108/nicecss). 
 
 ## Me
 My name is Joe. I design physical and virtual things and build websites. If you'd like me to do some work for you, or you just enjoy telling people they're doing it wrong, feel free to email joe at joeschoech dot com. 
