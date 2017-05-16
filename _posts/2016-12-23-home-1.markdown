@@ -41,7 +41,7 @@ It's fine to add and subtract new triangle levels to suit your needs. In my trav
 There's not a ton of information about ITCSS out there yet as it's pretty new. In fact Harry hasn't even officially launched [the site](http://itcss.io). But there is [a video of Harry talking about it](https://youtu.be/1OKZOV-iLj4), and [a blog post that includes project of his on github](http://www.hongkiat.com/blog/inverted-triangle-css-web-development).
 
 ## OOCSS
-Object Oriented Cascading Style Sheets is the granddaddy of em all. It all started with [a descptively simple insight](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code) by Nicole Sullivan that you could employ a tiny repeatable design pattern consisting of an image and some text to position pretty much every facebook post. It, she says, *saves hundreds of lines of code*. And so it does.
+Object Oriented Cascading Style Sheets is the granddaddy of em all. It all started with [a deceptively simple insight](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code) by Nicole Sullivan that you could employ a tiny repeatable design pattern consisting of an image and some text to position pretty much every facebook post. It, she says, *saves hundreds of lines of code*. And so it does.
 
 The code looks like this:
 
@@ -71,7 +71,7 @@ The two main principles of OOCSS are *separate structure from skin* and *separat
 
 In practice when writing OOCSS you'll notice that you tend to write rule sets that have one or two declarations rather than three, four, or more. If you find yourself writing novel length works you're probably not thinking in OOCSS.
 
-There's a lot out there about [how spcifically OOCSS should be writen](https://ianstormtaylor.com/oocss-plus-sass-is-the-best-way-to-css), which is often compelling and worth looking into, but IMO OOCSS really has the most value when appreciated as a principle rather than a collection of rules. Which is also true of a lot of other things. And as you'll see the methodologies to come are increasingly prescriptive and generally work well with OOCSS concepts.
+There's a lot out there about [how specifically OOCSS should be written](https://ianstormtaylor.com/oocss-plus-sass-is-the-best-way-to-css), which is often compelling and worth looking into, but IMO OOCSS really has the most value when appreciated as a principle rather than a collection of rules. Which is also true of a lot of other things. And as you'll see the methodologies to come are increasingly prescriptive and generally work well with OOCSS concepts.
 
 If you want to learn more about OOCSS here's [an intro article](https://www.smashingmagazine.com/2011/12/an-introduction-to-object-oriented-css-oocss) and [the official github](https://github.com/stubbornella/oocss/wiki).
 
@@ -80,7 +80,7 @@ SMA stand for Scalable and Modular Architecture and is a lot like a combination 
 
 There's [a whole book](https://smacss.com) written by the inventor of SMACSS, Jonathan Snook, which you can read mostly for free or buy if you are nice and want the premium content. 
 
-There's a bunch of articles [comparing OOCSS and SMACSS](https://www.sitepoint.com/bem-smacss-advice-from-developers) that sometimes get insanely technical and maybe matter but probably doen't. Your two choices are ultimately not SMACSS vs OOCSS but rather fucking things up vs spending all your time trying to develop the prefect set up that will prevent you from fucking up.
+There's a bunch of articles [comparing OOCSS and SMACSS](https://www.sitepoint.com/bem-smacss-advice-from-developers) that sometimes get insanely technical and maybe matter but probably doesn't. Your two choices are ultimately not SMACSS vs OOCSS but rather fucking things up vs spending all your time trying to develop the prefect set up that will prevent you from fucking up.
 
 SMACSS is pronounced *smacks* which is fun. ITCSS is pronounced *its* which is confusing. OOCSS is pronounced *ocean*, just kidding.
 
