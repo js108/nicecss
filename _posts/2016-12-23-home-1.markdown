@@ -20,7 +20,7 @@ You'll notice that these systems challenge the once sacred, specification endowe
 
 ITCSS is a system of organizing your CSS so you'll always know where to put and find things rather than just adding new selectors to the end of a file. This, amongst other benefits, keeps you from getting stuck in weird specificity potholes and avoids source order conflicts because you've arranged the source in a meaningful order. It's specifically intended to help large teams stay on the same page. It was developed by [Harry Roberts](http://csswizardry.com), who anyone who has ever tried to google away their CSS problems will know as CSS Wizardry. 
 
-![itcss](/nicecss/assets/itcss.svg)
+![itcss]({{ site.baseurl }}/assets/itcss.svg)
 
 The system is depicted in my inverted triangle diagram. In fact the IT stands for inverted triangle. 
 
