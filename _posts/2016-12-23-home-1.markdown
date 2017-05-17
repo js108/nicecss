@@ -116,7 +116,7 @@ There's [a whole site about BEM](http://getbem.com) you can dig into. Actually t
 ## Atomic CSS
 Now if you want to talk mega modularity let's talk Atomic CSS shall we? It was unveiled by Thierry Koblentz in his article [Challenging CSS Best Practices](https://www.smashingmagazine.com/2013/10/challenging-css-best-practices-atomic-approach). Atomic is probably not the best for big teams and projects as there's a danger of conflicts if too many people jump in (though Thierry would [disagree](https://twitter.com/thierrykoblentz/status/854461952852074496)). But if you just want to shralp a small site by your lonesome oh boy. The first site I tried to develop using OOCSS principles I ended up writing very atomic-like code without even knowing it. 
 
-With Atomic you write selectors like `.m-t-border` and just slap those puppies all over the place. `m-t-border means medium top border`, you don't even have time to write whole words you're moving so fast. You develop an artisanal of tiny design components that can be applied all over the place and your HTML ends up looking like:
+With Atomic you write selectors like `.m-t-border` and just slap those puppies all over the place. `m-t-border means medium top border`, you don't even have time to write whole words you're moving so fast. You develop an arsenal of tiny design components that can be applied all over the place and your HTML ends up looking like:
 
 ```
 <div class="m-t-border float-l bg-dark bricks-flying">
