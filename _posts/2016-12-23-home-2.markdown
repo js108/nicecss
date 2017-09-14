@@ -14,5 +14,3 @@ Publishing date is May 15th, 2017. Here's the [repo](https://github.com/js108/ni
 
 ## Me
 My name is Joe. I design physical and virtual things and build websites. If you'd like me to do some work for you, or you just enjoy telling people they're doing it wrong, feel free to email joe at joeschoech dot com. 
-
-I like basketball and reading. Here's something I wrote about how [I hate ESPN's website](https://medium.com/@on3ness/the-nightmare-online-espn-go-com-475d1d31b391#.hkc3tkagp).
